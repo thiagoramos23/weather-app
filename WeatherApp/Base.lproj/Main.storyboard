@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sunny" translatesAutoresizingMaskIntoConstraints="NO" id="Iau-Mi-GFm">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28˚C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXp-pl-IOI">
+                                <rect key="frame" x="110" y="200" width="194" height="96"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="80"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min: 24˚C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mh6-1k-epQ">
+                                <rect key="frame" x="50" y="304" width="112.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max: 24˚C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tkF-hL-p06">
+                                <rect key="frame" x="256" y="304" width="118" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="mh6-1k-epQ" firstAttribute="top" secondItem="dXp-pl-IOI" secondAttribute="bottom" constant="8" id="4HK-U5-hXN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tkF-hL-p06" secondAttribute="trailing" constant="40" id="4Th-I4-5OZ"/>
+                            <constraint firstItem="dXp-pl-IOI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Y6-H7-e4c"/>
+                            <constraint firstItem="Iau-Mi-GFm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6SH-tA-9LG"/>
+                            <constraint firstItem="mh6-1k-epQ" firstAttribute="centerY" secondItem="tkF-hL-p06" secondAttribute="centerY" id="HTr-qA-4AO"/>
+                            <constraint firstAttribute="bottom" secondItem="Iau-Mi-GFm" secondAttribute="bottom" id="KDu-5e-17j"/>
+                            <constraint firstItem="tkF-hL-p06" firstAttribute="baseline" secondItem="mh6-1k-epQ" secondAttribute="firstBaseline" id="MVT-zk-QcF"/>
+                            <constraint firstItem="tkF-hL-p06" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mh6-1k-epQ" secondAttribute="trailing" constant="8" symbolic="YES" id="YLQ-bs-90k"/>
+                            <constraint firstItem="Iau-Mi-GFm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eC3-Am-wpD"/>
+                            <constraint firstItem="Iau-Mi-GFm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nfF-N6-fsh"/>
+                            <constraint firstItem="mh6-1k-epQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="xCg-PI-DQh"/>
+                            <constraint firstItem="dXp-pl-IOI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-200" id="xr8-nd-vT9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mainTemperature" destination="dXp-pl-IOI" id="seX-FM-CCM"/>
+                        <outlet property="maxTemperature" destination="tkF-hL-p06" id="3nh-Hr-Tzb"/>
+                        <outlet property="minTemperature" destination="mh6-1k-epQ" id="3Nq-My-dCf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sunny" width="1125" height="2436"/>
+    </resources>
+</document>
